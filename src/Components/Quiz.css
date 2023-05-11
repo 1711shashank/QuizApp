@@ -1,0 +1,11 @@
+.OptionCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+
+
+}

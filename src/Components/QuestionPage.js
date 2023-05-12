@@ -2,6 +2,19 @@ import { Button } from '@mui/material';
 import React, { useState } from 'react';
 
 const QuestionPage = ({ question, options, onSelect, onNext, isLastQuestion }) => {
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const handleOptionSelect = (option) => {
+        setSelectedOption(option);
+        onSelect(option);
+    };
+
+    const handleNextClick = () => {
+        onSelect(selectedOption);
+        setSelectedOption('');
+        onNext();
+    };
+
 
     return (
         <>
@@ -11,20 +24,32 @@ const QuestionPage = ({ question, options, onSelect, onNext, isLastQuestion }) =
                         <p className='sno'>01 / 05</p>
                         <p className='timer'>10:00</p>
                     </div>
-                    <div className='questionPage-question'>  What is the capital of France? What is the capital of France? What is the capital of France? What is the capital of France? What is the capital of France? What is the capital of France? What is the capital of France?</div>
+                    <div className='questionPage-question'>{question}</div>
                 </div>
+
                 <div className='questionPage-bottom'>
                     <div className='quesionPage-options'>
-                        <p className='option'> option 1 </p>
-                        <p className='option'> option 2 </p>
-                        <p className='option'> option 3 </p>
-                        <p className='option'> option 4 </p>
+                        {options.map((option, index) => (
+                            <p
+                                className={`option ${selectedOption === option ? 'selected' : ''}`}
+                                key={index}
+                                onClick={() => handleOptionSelect(option)}
+                            >
+                                {option}
+                            </p>
+                        ))}
                     </div>
-                    <button> Next </button>
+
+                    <Button 
+                        variant="contained" 
+                        onClick={handleNextClick} 
+                        disabled={!selectedOption}
+                    >
+                        {isLastQuestion ? "Submit" : "Next"}
+                    </Button>
+
                 </div>
-
             </div>
-
         </>
     );
 };

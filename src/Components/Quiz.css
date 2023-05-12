@@ -58,3 +58,6 @@ button {
     border: none;
     color: white;
 }
+.selected{
+    background-color: greenyellow;
+}

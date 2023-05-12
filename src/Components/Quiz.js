@@ -5,6 +5,7 @@ import Result from './Result';
 import Home from './Home';
 
 import './Quiz.css'
+import QuestionPage from './QuestionPage';
 
 const Quiz = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -51,7 +52,7 @@ const Quiz = () => {
                 />
             ) : (
                 <>
-                    <Question
+                    <QuestionPage
                         question={questions[currentQuestion].question}
                         options={questions[currentQuestion].options}
                         onSelect={handleAnswerSelect}

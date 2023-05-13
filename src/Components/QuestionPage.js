@@ -15,7 +15,6 @@ const QuestionPage = ({ question, options, onSelect, onNext, isLastQuestion }) =
         onNext();
     };
 
-
     return (
         <>
             <div className='questionPage'>

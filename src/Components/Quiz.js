@@ -8,7 +8,7 @@ import './Quiz.css'
 import QuestionPage from './QuestionPage';
 
 const Quiz = () => {
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [currentQuestion, setCurrentQuestion] = useState(-3);
     const [answers, setAnswers] = useState([]);
 
     const questions = [
@@ -22,7 +22,6 @@ const Quiz = () => {
             options: ['Mercury', 'Venus', 'Earth', 'Mars'],
             correctAnswer: 'Mercury'
         }
-        // Add more questions here
     ];
 
     const handleAnswerSelect = (selectedOption) => {

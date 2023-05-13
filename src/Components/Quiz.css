@@ -1,4 +1,4 @@
-.questionPage{
+.questionPage {
     background-color: #f1f1f1;
     height: 100vh;
     display: flex;
@@ -7,20 +7,21 @@
     padding: 3rem;
 }
 
-.questionPage-head{
+.questionPage-head {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
 
-.sno{
+.sno {
     background-color: lightgreen;
     padding: 0.5rem 1.5rem;
     border-radius: 50rem;
     color: white;
     font-size: 1.4rem;
 }
-.timer{
+
+.timer {
     background-color: rebeccapurple;
     padding: 0.5rem 1.5rem;
     border-radius: 50rem;
@@ -28,13 +29,13 @@
     font-size: 1.4rem;
 }
 
-.questionPage-question{
+.questionPage-question {
     font-size: 1.5rem;
     text-align: left;
     font-weight: 500;
 }
 
-.questionPage-bottom{
+.questionPage-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +49,7 @@
     font-size: 1.6rem;
     width: 80vw;
 }
+
 button {
     background-color: white;
     margin-bottom: 1.5rem;
@@ -58,6 +60,42 @@ button {
     border: none;
     color: white;
 }
-.selected{
+
+.selected {
     background-color: greenyellow;
+}
+
+
+
+
+/* Result */
+.result {
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100vw;
+    height: 100vh;
+}
+.result-head{
+    padding: 5rem 0;
+    font-size: 4rem;
+    color: white;
+    font-weight: 600;
+
+}
+
+
+.result-user-name {
+    padding: 2rem 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.result-text {
+    padding: 2rem 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.result-button{
+    margin-top: 5rem;
+    font-size: 2rem;
 }

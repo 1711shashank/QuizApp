@@ -28,16 +28,6 @@ const Question = ({ question, options, onSelect, onNext, isLastQuestion }) => {
                     <li key={index}>
                         <div className='Questions-optionCard'>
                             <OptionCard option={option} selectedOption={selectedOption} handleOptionSelect={handleOptionSelect}/>
-                            {/* <div className='Questions-option'>
-                                {option}
-                            </div>
-                            <input
-                                className='Questions-radio'
-                                type="radio"
-                                value={option}
-                                checked={selectedOption === option}
-                                onChange={() => handleOptionSelect(option)}
-                            /> */}
                         </div>
 
                     </li>

@@ -7,7 +7,7 @@ const Home = ({ onNext }) => {
             <div className='home'>
                 <p className='home-head'> Quiz App </p>
                 
-                <img src={Logo} width="200px" />
+                <img src={Logo} width="200px" alt=''/>
 
                 <p className='home-name'> Welcome <br /> Kumar Shashank </p>
 

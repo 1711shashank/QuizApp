@@ -1,12 +1,12 @@
 .home{
     background: linear-gradient(to right, #4a00e0, #8e2de2);
     height: 100vh;
-    padding: 7rem 0;
+    padding: 5rem 0;
 }
 .home-head{
     font-size: 5rem;
     color: white;
-    margin: 5rem;
+    margin: 4rem;
     font-weight: 600;
 }
 .home-name{

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import TrophyImg from './images/trophy.png';
 
@@ -25,7 +26,7 @@ const Result = ({ questions, answers, setCurrentQuestion }) => {
     return (
         <div className='result'>
             <p className='result-head'>Quiz Completed!</p>
-            <img src={TrophyImg} />
+            <img src={TrophyImg} alt=''/>
             <p className='result-user-name'> Kumar Shashank </p>
             <p className='result-text'> {` You scored ${score} out of ${questions.length}`} </p>
             <button className='result-button' onClick={() => setCurrentQuestion(-1)}> Finish </button>

@@ -3,7 +3,7 @@ import OptionCard from './OptionCard';
 
 const QuestionPage = ({ questionNumber, question, options, onSelect, onNext, isLastQuestion, stopQuiz }) => {
 
-    const [seconds, setSeconds] = useState(100);
+    const [seconds, setSeconds] = useState(60);
     const [isRunning, setIsRunning] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
 

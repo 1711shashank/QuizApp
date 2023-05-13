@@ -1,12 +1,15 @@
-import { Button } from '@mui/material'
+import Logo from './images/logo.png';
 import React from 'react'
 
 const Home = ({ onNext }) => {
     return (
         <>
-            <div>
-                <p> The Daily GK Quiz</p>
-                <Button variant="contained" onClick={onNext}>Take Quiz</Button>
+            <div className='home'>
+                <p className='home-head'> Quiz App </p>
+                  <img src={Logo} width="200px"/>
+
+                <p className='home-name'> Welcome <br/> Kumar Shashank </p>
+                <button className='home-button' onClick={onNext}>Start Quiz</button>
             </div>
         </>
     )

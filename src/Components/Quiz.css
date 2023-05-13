@@ -1,4 +1,29 @@
+.home{
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    padding: 10rem 0;
+}
+.home-head{
+    font-size: 5rem;
+    color: white;
+    margin: 5rem;
+    font-weight: 600;
+}
+.home-name{
+    font-size: 3rem;
+    color: white;
+    margin: 5rem;
+    font-weight: 600;
+}
+
+.home-button{
+    margin-top: 5rem;
+    font-size: 2.5rem;
+
+}
+
 .questionPage {
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-color: #f1f1f1;
     height: 100vh;
     display: flex;
@@ -22,7 +47,7 @@
 }
 
 .timer {
-    background-color: rebeccapurple;
+    background-color: #ff6b27;
     padding: 0.5rem 1.5rem;
     border-radius: 50rem;
     color: white;
@@ -30,9 +55,10 @@
 }
 
 .questionPage-question {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: left;
     font-weight: 500;
+    color: white;
 }
 
 .questionPage-bottom {

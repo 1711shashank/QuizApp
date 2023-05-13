@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import TrophyImg from './images/trophy.png';
 
-const Result = ({ questions, answers }) => {
+const Result = ({ questions, answers, setCurrentQuestion }) => {
+
+  console.log(answers);
 
   const [score, setScore] = useState(0);
 
@@ -33,7 +35,7 @@ const Result = ({ questions, answers }) => {
       <img src={TrophyImg} />
       <p className='result-user-name'> Kumar Shashank </p>
       <p className='result-text'> {` You scored ${score} out of ${questions.length}`} </p>
-      <button className='result-button'> Finish </button>
+      <button className='result-button' onClick={() => setCurrentQuestion(-1)}> Finish </button>
     </div>
   );
 };

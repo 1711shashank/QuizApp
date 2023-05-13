@@ -1,7 +1,7 @@
 .home{
-    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4a00e0, #8e2de2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
-    padding: 10rem 0;
+    padding: 7rem 0;
 }
 .home-head{
     font-size: 5rem;
@@ -23,7 +23,7 @@
 }
 
 .questionPage {
-    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4a00e0, #8e2de2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-color: #f1f1f1;
     height: 100vh;
     display: flex;
@@ -72,31 +72,41 @@
     margin-bottom: 1.5rem;
     border-radius: 5px;
     padding: 1.5rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 400;
     width: 80vw;
 }
 
 button {
-    background-color: white;
     margin-bottom: 1.5rem;
     border-radius: 50px;
     background-color: rgb(193, 25, 193);
-    padding: 0.8rem 2.5rem;
+    padding: 1rem 2.5rem;
     font-size: 1.6rem;
     border: none;
     color: white;
+    min-width: 15rem;
 }
 
 .selected {
     background-color: greenyellow;
 }
 
+.nextButton {
+    font-size: 2rem;
+
+}
+
+.nextButton:disabled {
+    background-color: lightgray;
+    color:  rgb(101, 101, 101); 
+}
 
 
 
 /* Result */
 .result {
-    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4a00e0, #8e2de2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100vw;
     height: 100vh;
 }
@@ -105,7 +115,6 @@ button {
     font-size: 4rem;
     color: white;
     font-weight: 600;
-
 }
 
 

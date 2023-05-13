@@ -1,20 +1,20 @@
 import React from 'react'
 
-const OptionCard = ({ option, selectedOption, handleOptionSelect }) => {
+const OptionCard = ({ options, selectedOption, setSelectedOption }) => {
     return (
         <>
-            <div className='OptionCard'>
-                <div className='Option'>
-                    {option}
-                </div>
-                <input
-                    className='Questions-radio'
-                    type="radio"
-                    value={option}
-                    checked={selectedOption === option}
-                    onChange={() => handleOptionSelect(option)}
-                />
+            <div className='quesionPage-options'>
+                {options.map((option, index) => (
+                    <p
+                        className={`option ${selectedOption === option ? 'selected' : ''}`}
+                        key={index}
+                        onClick={() => setSelectedOption(option)}
+                    >
+                        {option}
+                    </p>
+                ))}
             </div>
+
         </>
     )
 }

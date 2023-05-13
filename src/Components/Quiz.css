@@ -1,5 +1,5 @@
 .home{
-    background: linear-gradient(to right, #4a00e0, #8e2de2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
     height: 100vh;
     padding: 7rem 0;
 }
@@ -23,7 +23,7 @@
 }
 
 .questionPage {
-    background: linear-gradient(to right, #4a00e0, #8e2de2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4a00e0, #8e2de2); 
     background-color: #f1f1f1;
     height: 100vh;
     display: flex;
@@ -106,7 +106,7 @@ button {
 
 /* Result */
 .result {
-    background: linear-gradient(to right, #4a00e0, #8e2de2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4a00e0, #8e2de2); 
     width: 100vw;
     height: 100vh;
 }

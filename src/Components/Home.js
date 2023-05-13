@@ -6,9 +6,11 @@ const Home = ({ onNext }) => {
         <>
             <div className='home'>
                 <p className='home-head'> Quiz App </p>
-                  <img src={Logo} width="200px"/>
+                
+                <img src={Logo} width="200px" />
 
-                <p className='home-name'> Welcome <br/> Kumar Shashank </p>
+                <p className='home-name'> Welcome <br /> Kumar Shashank </p>
+
                 <button className='home-button' onClick={onNext}>Start Quiz</button>
             </div>
         </>

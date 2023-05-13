@@ -1,12 +1,12 @@
-import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import OptionCard from './OptionCard';
 
 const QuestionPage = ({ questionNumber, question, options, onSelect, onNext, isLastQuestion, stopQuiz }) => {
+
+    const [seconds, setSeconds] = useState(100);
+    const [isRunning, setIsRunning] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
 
-    const handleOptionSelect = (index, option) => {
-        setSelectedOption(option);
-    };
 
     const handleNextClick = () => {
         onSelect(selectedOption);
@@ -14,12 +14,15 @@ const QuestionPage = ({ questionNumber, question, options, onSelect, onNext, isL
         onNext();
     };
 
-    const [seconds, setSeconds] = useState(100);
-    const [isRunning, setIsRunning] = useState(false);
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+        const seconds = (time % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    };
 
     useEffect(() => {
 
-        startTimer();
+        setIsRunning(true);
 
         let intervalId;
         if (isRunning) {
@@ -36,22 +39,8 @@ const QuestionPage = ({ questionNumber, question, options, onSelect, onNext, isL
             }, 1000);
         }
 
-        return () => {
-            clearInterval(intervalId);
-        };
 
     }, [isRunning]);
-
-    const startTimer = () => {
-        setIsRunning(true);
-    };
-
-    const formatTime = (time) => {
-        const minutes = Math.floor(time / 60).toString().padStart(2, '0');
-        const seconds = (time % 60).toString().padStart(2, '0');
-        return `${minutes}:${seconds}`;
-    };
-
 
 
     return (
@@ -66,17 +55,8 @@ const QuestionPage = ({ questionNumber, question, options, onSelect, onNext, isL
                 </div>
 
                 <div className='questionPage-bottom'>
-                    <div className='quesionPage-options'>
-                        {options.map((option, index) => (
-                            <p
-                                className={`option ${selectedOption === option ? 'selected' : ''}`}
-                                key={index}
-                                onClick={() => handleOptionSelect(index, option)}
-                            >
-                                {option}
-                            </p>
-                        ))}
-                    </div>
+
+                    <OptionCard options={options} selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
 
                     <button
                         className={`nextButton ${isLastQuestion ? 'submit' : ''}`}
@@ -86,8 +66,6 @@ const QuestionPage = ({ questionNumber, question, options, onSelect, onNext, isL
                     >
                         {isLastQuestion ? "Submit" : "Next"}
                     </button>
-
-
                 </div>
             </div>
         </>
